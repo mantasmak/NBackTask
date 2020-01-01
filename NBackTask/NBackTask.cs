@@ -139,11 +139,19 @@ namespace NBackTask
             List<String> fileText = new List<String>();
             int i = 0;
 
-            foreach (Answer ans in answer)
+            foreach(var num in sequence)
             {
-                fileText.Add(sequence[i] + " " + ans.ToString());
-                Console.WriteLine(sequence[i] + ans.ToString());
-                i++;
+                if(answer.Count > i)
+                {
+                    fileText.Add(num + " " + answer[i].ToString());
+                    Console.WriteLine(num + answer[i].ToString());
+                    i++;
+                }
+                else
+                {
+                    fileText.Add(num);
+                    Console.WriteLine(num);
+                }
             }
             File.WriteAllLines(name + ".txt", fileText);
         }

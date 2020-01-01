@@ -20,6 +20,7 @@ namespace NBackTask
         int iteration = -1;
         System.Timers.Timer mainTimer;
         Stopwatch stopwatch;
+        int turn = -1;
 
         public Form1()
         {
@@ -42,7 +43,7 @@ namespace NBackTask
             System.Timers.Timer timer = new System.Timers.Timer { Interval = 200 };
             timer.Enabled = true;
             timer.AutoReset = false;
-            if (nback.CheckAnswer(iteration) == true)   //correct
+            if (nback.CheckAnswer(iteration - turn) == true)   //correct
             {
                 picTop.BackColor = Color.Green;
                 picBottom.BackColor = Color.Green;
@@ -55,8 +56,12 @@ namespace NBackTask
                 labWrong.Visible = true;
             }
             timer.Elapsed += OnTimerEvent;
-            butPositive.Enabled = false;
-            butNegative.Enabled = false;
+            turn--;
+            if (turn < 0)
+            {
+                butPositive.Enabled = false;
+                butNegative.Enabled = false;
+            }
         }
 
         private void butNegative_Click(object sender, EventArgs e)
@@ -68,7 +73,7 @@ namespace NBackTask
             System.Timers.Timer timer = new System.Timers.Timer { Interval = 200 };
             timer.Enabled = true;
             timer.AutoReset = false;
-            if (nback.CheckAnswer(iteration) == true)   //wrong
+            if (nback.CheckAnswer(iteration - turn) == true)   //wrong
             {
                 picTop.BackColor = Color.Red;
                 picBottom.BackColor = Color.Red;
@@ -81,8 +86,12 @@ namespace NBackTask
                 labCorrect.Visible = true;
             }
             timer.Elapsed += OnTimerEvent;
-            butPositive.Enabled = false;
-            butNegative.Enabled = false;
+            turn--;
+            if (turn < 0)
+            {
+                butPositive.Enabled = false;
+                butNegative.Enabled = false;
+            }
         }
 
         delegate void SetLabelVisibleCallback();
@@ -140,48 +149,11 @@ namespace NBackTask
             }
 
             iteration++;
+            turn++;
             SetLabelText(sequence[iteration]);
             Thread.Sleep(844);
             stopwatch.Reset();
             stopwatch.Start();
-        }
-
-        private void butStart_Click(object sender, EventArgs e)
-        {
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textBoxN.Text, "^[2-5]$") || textBoxName.Text == "" || !System.Text.RegularExpressions.Regex.IsMatch(textBoxSeq.Text, @"^[0-9]*$"))
-            {
-                return;
-            }
-
-            if (textBoxSeq.Text == "")
-                nback.StartTest(textBoxName.Text, Convert.ToInt32(textBoxN.Text));
-            else
-            {
-                Char[] numbers = textBoxSeq.Text.ToCharArray();
-                List<String> numToStr = new List<String>();
-                foreach (Char num in numbers)
-                {
-                    numToStr.Add(num.ToString());
-                }
-                nback.StartTest(textBoxName.Text, Convert.ToInt32(textBoxN.Text), numToStr);
-            }
-            sequence = nback.GetSequence();
-
-            butStart.Visible = false;
-            butPositive.Visible = true;
-            butNegative.Visible = true;
-            labNumber.Visible = true;
-            textBoxN.Visible = false;
-            labN.Visible = false;
-            labName.Visible = false;
-            textBoxName.Visible = false;
-            labSequence.Visible = false;
-            textBoxSeq.Visible = false;
-
-            mainTimer = new System.Timers.Timer { Interval = 3000 };
-            mainTimer.Enabled = true;
-            mainTimer.Elapsed += NextNumberEvent;
-            mainTimer.Start();
         }
 
         delegate void ShowEndingScreenCallback();
@@ -206,31 +178,64 @@ namespace NBackTask
         {
             Application.Exit();
         }
-
-        private void textBoxN_TextChanged_1(object sender, EventArgs e)
+        
+        private void butTest1_Click(object sender, EventArgs e)
         {
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textBoxN.Text, "^[2-5]$"))
-            {
-                //textBoxN.Text = "";
-                textBoxN.BackColor = Color.PaleVioletRed;
-            }
-            else
-            {
-                textBoxN.BackColor = Color.White;
-            }
+            StartTest("15123535242978768131", 2);
+        }
+        
+        private void butTest2_Click(object sender, EventArgs e)
+        {
+            StartTest("23245454797616434321", 2);
+        }
+        
+        private void butTest3_Click(object sender, EventArgs e)
+        {
+            StartTest("23224564564589729732", 3);
+        }
+        
+        private void butTest4_Click(object sender, EventArgs e)
+        {
+            StartTest("23452379817921672867", 4);
         }
 
-        private void textBoxSeq_TextChanged(object sender, EventArgs e)
+        private void butTest5_Click(object sender, EventArgs e)
         {
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textBoxSeq.Text, @"^[0-9]*$"))
+            StartTest("23456237592145945479", 5);
+        }
+
+        private void StartTest(String seq, int n)
+        {
+            if (textBoxName.Text == "")
             {
-                //textBoxN.Text = "";
-                textBoxSeq.BackColor = Color.PaleVioletRed;
+                return;
             }
-            else
+
+            Char[] numbers = seq.ToCharArray();
+            List<String> numToStr = new List<String>();
+            foreach (Char num in numbers)
             {
-                textBoxSeq.BackColor = Color.White;
+                numToStr.Add(num.ToString());
             }
+            nback.StartTest(textBoxName.Text, 2, numToStr);
+
+            sequence = nback.GetSequence();
+
+            butTest1.Visible = false;
+            butTest2.Visible = false;
+            butTest3.Visible = false;
+            butTest4.Visible = false;
+            butTest5.Visible = false;
+            butPositive.Visible = true;
+            butNegative.Visible = true;
+            labNumber.Visible = true;
+            labName.Visible = false;
+            textBoxName.Visible = false;
+
+            mainTimer = new System.Timers.Timer { Interval = 3000 };
+            mainTimer.Enabled = true;
+            mainTimer.Elapsed += NextNumberEvent;
+            mainTimer.Start();
         }
     }
 }

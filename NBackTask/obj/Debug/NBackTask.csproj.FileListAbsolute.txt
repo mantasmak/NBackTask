@@ -1,0 +1,10 @@
+D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\bin\Debug\NBackTask.exe.config
+D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\bin\Debug\NBackTask.exe
+D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\bin\Debug\NBackTask.pdb
+D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBackTask.csprojResolveAssemblyReference.cache
+D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBackTask.Form1.resources
+D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBackTask.Properties.Resources.resources
+D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBackTask.csproj.GenerateResource.cache
+D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBackTask.csproj.CoreCompileInputs.cache
+D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBackTask.exe
+D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBackTask.pdb

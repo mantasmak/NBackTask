@@ -33,18 +33,18 @@
             this.labNumber = new System.Windows.Forms.Label();
             this.picTop = new System.Windows.Forms.PictureBox();
             this.picBottom = new System.Windows.Forms.PictureBox();
-            this.butStart = new System.Windows.Forms.Button();
             this.labCountdown = new System.Windows.Forms.Label();
             this.labEnding = new System.Windows.Forms.Label();
             this.butEnd = new System.Windows.Forms.Button();
-            this.labN = new System.Windows.Forms.Label();
-            this.textBoxN = new System.Windows.Forms.TextBox();
             this.labCorrect = new System.Windows.Forms.Label();
             this.labWrong = new System.Windows.Forms.Label();
             this.labName = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.labSequence = new System.Windows.Forms.Label();
-            this.textBoxSeq = new System.Windows.Forms.TextBox();
+            this.butTest1 = new System.Windows.Forms.Button();
+            this.butTest2 = new System.Windows.Forms.Button();
+            this.butTest3 = new System.Windows.Forms.Button();
+            this.butTest4 = new System.Windows.Forms.Button();
+            this.butTest5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBottom)).BeginInit();
             this.SuspendLayout();
@@ -103,17 +103,6 @@
             this.picBottom.TabIndex = 4;
             this.picBottom.TabStop = false;
             // 
-            // butStart
-            // 
-            this.butStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butStart.Location = new System.Drawing.Point(218, 314);
-            this.butStart.Name = "butStart";
-            this.butStart.Size = new System.Drawing.Size(374, 124);
-            this.butStart.TabIndex = 5;
-            this.butStart.Text = "PRADĖTI";
-            this.butStart.UseVisualStyleBackColor = true;
-            this.butStart.Click += new System.EventHandler(this.butStart_Click);
-            // 
             // labCountdown
             // 
             this.labCountdown.AutoSize = true;
@@ -147,24 +136,6 @@
             this.butEnd.Visible = false;
             this.butEnd.Click += new System.EventHandler(this.butEnd_Click);
             // 
-            // labN
-            // 
-            this.labN.AutoSize = true;
-            this.labN.Location = new System.Drawing.Point(370, 170);
-            this.labN.Name = "labN";
-            this.labN.Size = new System.Drawing.Size(15, 13);
-            this.labN.TabIndex = 10;
-            this.labN.Text = "N";
-            // 
-            // textBoxN
-            // 
-            this.textBoxN.Location = new System.Drawing.Point(391, 167);
-            this.textBoxN.Name = "textBoxN";
-            this.textBoxN.Size = new System.Drawing.Size(28, 20);
-            this.textBoxN.TabIndex = 11;
-            this.textBoxN.Text = "3";
-            this.textBoxN.TextChanged += new System.EventHandler(this.textBoxN_TextChanged_1);
-            // 
             // labCorrect
             // 
             this.labCorrect.AutoSize = true;
@@ -194,7 +165,7 @@
             // labName
             // 
             this.labName.AutoSize = true;
-            this.labName.Location = new System.Drawing.Point(345, 142);
+            this.labName.Location = new System.Drawing.Point(345, 122);
             this.labName.Name = "labName";
             this.labName.Size = new System.Drawing.Size(40, 13);
             this.labName.TabIndex = 14;
@@ -202,45 +173,78 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(391, 139);
+            this.textBoxName.Location = new System.Drawing.Point(391, 119);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(77, 20);
             this.textBoxName.TabIndex = 15;
             // 
-            // labSequence
+            // butTest1
             // 
-            this.labSequence.AutoSize = true;
-            this.labSequence.Location = new System.Drawing.Point(352, 201);
-            this.labSequence.Name = "labSequence";
-            this.labSequence.Size = new System.Drawing.Size(32, 13);
-            this.labSequence.TabIndex = 16;
-            this.labSequence.Text = "Seka";
+            this.butTest1.Location = new System.Drawing.Point(218, 176);
+            this.butTest1.Name = "butTest1";
+            this.butTest1.Size = new System.Drawing.Size(374, 47);
+            this.butTest1.TabIndex = 16;
+            this.butTest1.Text = "Bandymas (N = 2)";
+            this.butTest1.UseVisualStyleBackColor = true;
+            this.butTest1.Click += new System.EventHandler(this.butTest1_Click);
             // 
-            // textBoxSeq
+            // butTest2
             // 
-            this.textBoxSeq.Location = new System.Drawing.Point(390, 198);
-            this.textBoxSeq.Name = "textBoxSeq";
-            this.textBoxSeq.Size = new System.Drawing.Size(150, 20);
-            this.textBoxSeq.TabIndex = 17;
-            this.textBoxSeq.TextChanged += new System.EventHandler(this.textBoxSeq_TextChanged);
+            this.butTest2.Location = new System.Drawing.Point(218, 229);
+            this.butTest2.Name = "butTest2";
+            this.butTest2.Size = new System.Drawing.Size(374, 47);
+            this.butTest2.TabIndex = 17;
+            this.butTest2.Text = "N = 2";
+            this.butTest2.UseVisualStyleBackColor = true;
+            this.butTest2.Click += new System.EventHandler(this.butTest2_Click);
+            // 
+            // butTest3
+            // 
+            this.butTest3.Location = new System.Drawing.Point(218, 282);
+            this.butTest3.Name = "butTest3";
+            this.butTest3.Size = new System.Drawing.Size(374, 47);
+            this.butTest3.TabIndex = 18;
+            this.butTest3.Text = "N = 3";
+            this.butTest3.UseVisualStyleBackColor = true;
+            this.butTest3.Click += new System.EventHandler(this.butTest3_Click);
+            // 
+            // butTest4
+            // 
+            this.butTest4.Location = new System.Drawing.Point(218, 335);
+            this.butTest4.Name = "butTest4";
+            this.butTest4.Size = new System.Drawing.Size(374, 47);
+            this.butTest4.TabIndex = 19;
+            this.butTest4.Text = "N = 4";
+            this.butTest4.UseVisualStyleBackColor = true;
+            this.butTest4.Click += new System.EventHandler(this.butTest4_Click);
+            // 
+            // butTest5
+            // 
+            this.butTest5.Location = new System.Drawing.Point(218, 388);
+            this.butTest5.Name = "butTest5";
+            this.butTest5.Size = new System.Drawing.Size(374, 47);
+            this.butTest5.TabIndex = 20;
+            this.butTest5.Text = "N = 5";
+            this.butTest5.UseVisualStyleBackColor = true;
+            this.butTest5.Click += new System.EventHandler(this.butTest5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBoxSeq);
-            this.Controls.Add(this.labSequence);
+            this.Controls.Add(this.butTest5);
+            this.Controls.Add(this.butTest4);
+            this.Controls.Add(this.butTest3);
+            this.Controls.Add(this.butTest2);
+            this.Controls.Add(this.butTest1);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labName);
             this.Controls.Add(this.labWrong);
             this.Controls.Add(this.labCorrect);
-            this.Controls.Add(this.textBoxN);
-            this.Controls.Add(this.labN);
             this.Controls.Add(this.butEnd);
             this.Controls.Add(this.labEnding);
             this.Controls.Add(this.labCountdown);
-            this.Controls.Add(this.butStart);
             this.Controls.Add(this.picBottom);
             this.Controls.Add(this.picTop);
             this.Controls.Add(this.labNumber);
@@ -263,18 +267,18 @@
         private System.Windows.Forms.PictureBox picTop;
         private System.Windows.Forms.PictureBox picBottom;
         public System.Windows.Forms.Label labNumber;
-        private System.Windows.Forms.Button butStart;
         public System.Windows.Forms.Label labCountdown;
         public System.Windows.Forms.Label labEnding;
         private System.Windows.Forms.Button butEnd;
-        private System.Windows.Forms.Label labN;
-        private System.Windows.Forms.TextBox textBoxN;
         public System.Windows.Forms.Label labCorrect;
         public System.Windows.Forms.Label labWrong;
         private System.Windows.Forms.Label labName;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Label labSequence;
-        private System.Windows.Forms.TextBox textBoxSeq;
+        private System.Windows.Forms.Button butTest1;
+        private System.Windows.Forms.Button butTest2;
+        private System.Windows.Forms.Button butTest3;
+        private System.Windows.Forms.Button butTest4;
+        private System.Windows.Forms.Button butTest5;
     }
 }
 
