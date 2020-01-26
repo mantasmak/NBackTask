@@ -239,5 +239,10 @@ namespace NBackTask
             mainTimer.Elapsed += NextNumberEvent;
             mainTimer.Start();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

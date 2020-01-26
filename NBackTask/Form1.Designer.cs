@@ -45,6 +45,7 @@
             this.butTest3 = new System.Windows.Forms.Button();
             this.butTest4 = new System.Windows.Forms.Button();
             this.butTest5 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBottom)).BeginInit();
             this.SuspendLayout();
@@ -228,11 +229,22 @@
             this.butTest5.UseVisualStyleBackColor = true;
             this.butTest5.Click += new System.EventHandler(this.butTest5_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(706, 438);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Github: mantasmak";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.butTest5);
             this.Controls.Add(this.butTest4);
             this.Controls.Add(this.butTest3);
@@ -279,6 +291,7 @@
         private System.Windows.Forms.Button butTest3;
         private System.Windows.Forms.Button butTest4;
         private System.Windows.Forms.Button butTest5;
+        private System.Windows.Forms.Label label1;
     }
 }
 
