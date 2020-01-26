@@ -8,3 +8,13 @@ D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBac
 D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBackTask.csproj.CoreCompileInputs.cache
 D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBackTask.exe
 D:\User\Documents\Visual Studio 2017\Projects\NBackTask\NBackTask\obj\Debug\NBackTask.pdb
+C:\Users\Mantas\source\repos\NBackTask\NBackTask\bin\Debug\NBackTask.exe.config
+C:\Users\Mantas\source\repos\NBackTask\NBackTask\bin\Debug\NBackTask.exe
+C:\Users\Mantas\source\repos\NBackTask\NBackTask\bin\Debug\NBackTask.pdb
+C:\Users\Mantas\source\repos\NBackTask\NBackTask\obj\Debug\NBackTask.csprojAssemblyReference.cache
+C:\Users\Mantas\source\repos\NBackTask\NBackTask\obj\Debug\NBackTask.Form1.resources
+C:\Users\Mantas\source\repos\NBackTask\NBackTask\obj\Debug\NBackTask.Properties.Resources.resources
+C:\Users\Mantas\source\repos\NBackTask\NBackTask\obj\Debug\NBackTask.csproj.GenerateResource.cache
+C:\Users\Mantas\source\repos\NBackTask\NBackTask\obj\Debug\NBackTask.csproj.CoreCompileInputs.cache
+C:\Users\Mantas\source\repos\NBackTask\NBackTask\obj\Debug\NBackTask.exe
+C:\Users\Mantas\source\repos\NBackTask\NBackTask\obj\Debug\NBackTask.pdb

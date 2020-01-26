@@ -16,7 +16,7 @@ namespace NBackTask
     public partial class Form1 : Form
     {
         NBackTask nback;
-        List<System.IO.UnmanagedMemoryStream> sequence;
+        List<String> sequence;
         int iteration = -1;
         System.Timers.Timer mainTimer;
         Stopwatch stopwatch;
@@ -47,14 +47,12 @@ namespace NBackTask
                 nback.AddAnswer(new Answer(true, true, stopwatch.ElapsedMilliseconds));
                 picTop.BackColor = Color.Green;
                 picBottom.BackColor = Color.Green;
-                labCorrect.Visible = true;
             }
             else                                        //wrong
             {
                 nback.AddAnswer(new Answer(true, false, stopwatch.ElapsedMilliseconds));
                 picTop.BackColor = Color.Red;
                 picBottom.BackColor = Color.Red;
-                labWrong.Visible = true;
             }
             timer.Elapsed += OnTimerEvent;
             turn--;
@@ -78,14 +76,12 @@ namespace NBackTask
                 nback.AddAnswer(new Answer(false, false, stopwatch.ElapsedMilliseconds));
                 picTop.BackColor = Color.Red;
                 picBottom.BackColor = Color.Red;
-                labWrong.Visible = true;
             }
             else                                        //correct
             {
                 nback.AddAnswer(new Answer(false, true, stopwatch.ElapsedMilliseconds));
                 picTop.BackColor = Color.Green;
                 picBottom.BackColor = Color.Green;
-                labCorrect.Visible = true;
             }
             timer.Elapsed += OnTimerEvent;
             turn--;
@@ -120,23 +116,19 @@ namespace NBackTask
             timer.Close();
         }
 
-        delegate void SetLabelTextCallback(System.IO.UnmanagedMemoryStream text);
-        public void SetLabelText(System.IO.UnmanagedMemoryStream sound)
+        delegate void SetLabelTextCallback(String text);
+        public void SetLabelText(String number)
         {
             if (this.labNumber.InvokeRequired)
             {
                 SetLabelTextCallback d = new SetLabelTextCallback(SetLabelText);
-                Invoke(d, new object[] { sound });
+                Invoke(d, new object[] { number });
             }
             else
             {
                 butPositive.Enabled = true;
                 butNegative.Enabled = true;
-                SoundPlayer player = new SoundPlayer();
-                sound.Position = 0;
-                player.Stream = null;
-                player.Stream = sound;
-                player.Play();
+                labNumber.Text = number;
             }
         }
 
@@ -221,7 +213,7 @@ namespace NBackTask
             }
             nback.StartTest(textBoxName.Text, n, numToStr);
 
-            sequence = nback.GetSoundSequence();
+            sequence = numToStr;
 
             butTest1.Visible = false;
             butTest2.Visible = false;

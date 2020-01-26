@@ -78,10 +78,10 @@
             // labNumber
             // 
             this.labNumber.AutoSize = true;
-            this.labNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNumber.Location = new System.Drawing.Point(385, 155);
+            this.labNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNumber.Location = new System.Drawing.Point(379, 135);
             this.labNumber.Name = "labNumber";
-            this.labNumber.Size = new System.Drawing.Size(0, 31);
+            this.labNumber.Size = new System.Drawing.Size(0, 46);
             this.labNumber.TabIndex = 2;
             this.labNumber.Visible = false;
             // 
