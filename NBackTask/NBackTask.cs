@@ -169,7 +169,7 @@ namespace NBackTask
             fileText.Add("Teisingai: " + CalculeteCorrectAnswers() + " Neteisingai: " + CalculeteIncorrectAnswers());
             fileText.Add("\n");
             File.AppendAllLines(name + ".txt", fileText);
-            SendReport(String.Join("\n", fileText));
+            //SendReport(String.Join("\n", fileText));
         }
 
         private void SendReport(String body)
@@ -179,7 +179,7 @@ namespace NBackTask
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
                 mail.From = new MailAddress("");
-                mail.To.Add(""); //remove
+                mail.To.Add("");
                 mail.Subject = "[NBackTask] " + name + " | N=" + n;
                 mail.Body = body;
 
@@ -188,7 +188,7 @@ namespace NBackTask
                 mail.Attachments.Add(attachment);
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("", ""); //remove
+                SmtpServer.Credentials = new System.Net.NetworkCredential("", "");
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);

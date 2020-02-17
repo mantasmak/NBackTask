@@ -1,6 +1,6 @@
 ﻿namespace NBackTask
 {
-    partial class Form1
+    partial class NbackTask
     {
         /// <summary>
         /// Required designer variable.
@@ -79,17 +79,17 @@
             // labNumber
             // 
             this.labNumber.AutoSize = true;
-            this.labNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNumber.Location = new System.Drawing.Point(379, 135);
+            this.labNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 100F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNumber.Location = new System.Drawing.Point(336, 73);
             this.labNumber.Name = "labNumber";
-            this.labNumber.Size = new System.Drawing.Size(0, 46);
+            this.labNumber.Size = new System.Drawing.Size(0, 153);
             this.labNumber.TabIndex = 2;
             this.labNumber.Visible = false;
             // 
             // picTop
             // 
             this.picTop.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.picTop.Location = new System.Drawing.Point(335, 99);
+            this.picTop.Location = new System.Drawing.Point(335, 52);
             this.picTop.Name = "picTop";
             this.picTop.Size = new System.Drawing.Size(133, 22);
             this.picTop.TabIndex = 3;
@@ -98,7 +98,7 @@
             // picBottom
             // 
             this.picBottom.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.picBottom.Location = new System.Drawing.Point(335, 199);
+            this.picBottom.Location = new System.Drawing.Point(335, 229);
             this.picBottom.Name = "picBottom";
             this.picBottom.Size = new System.Drawing.Size(133, 22);
             this.picBottom.TabIndex = 4;
@@ -238,7 +238,7 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Github: mantasmak";
             // 
-            // Form1
+            // NbackTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -261,8 +261,8 @@
             this.Controls.Add(this.labNumber);
             this.Controls.Add(this.butNegative);
             this.Controls.Add(this.butPositive);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "NbackTask";
+            this.Text = "VisualNbackTask";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBottom)).EndInit();

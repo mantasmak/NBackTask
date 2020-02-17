@@ -263,7 +263,7 @@
             this.Controls.Add(this.butNegative);
             this.Controls.Add(this.butPositive);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "NbackTask";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBottom)).EndInit();
